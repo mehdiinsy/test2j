@@ -15,9 +15,9 @@ while($ligne = $resultat->fetch_assoc()){
 }
 
 $smarty = new Smarty();
-$smarty->setTemplateDir('smarty-4.3.0/demo');
-$smarty->setCompileDir('smarty-4.3.0/demo');
-$smarty->setCacheDir('smarty-4.3.0/demo');
+$smarty->setTemplateDir('./templates');
+$smarty->setCompileDir('./templates_c');
+$smarty->setCacheDir('./cache');
 
 $smarty->assign('billets', $billets);
 
@@ -30,11 +30,34 @@ if(isset($_POST['titre']) && isset($_POST['contenu'])){
 }
 $smarty->assign('titre', $titre);
 
+if(!empty($_POST['titre'])&& !empty($_POST['contenu'])){
+    $titre = $_POST['titre'];
+    $contenu = $_POST['contenu'];
+
 $requete = "INSERT INTO billets_blog(titre,contenu,date_billet)
 VALUES('$titre', '$contenu', NOW())";
 $resultat = $mysqli->query($requete);
+}
+else{
+    echo "Remplissez tout les champs";
+}
+echo "<h1>Résumé des derniers billets entrés :</h1>" . "<br>";
 
-$smarty->display('essai.tpl');
+$sql = "SELECT titre,contenu,date_billet FROM billets_blog";
+$result = mysqli_query($mysqli,$sql);
+if(mysqli_num_rows($result)>0){
+    while($row = mysqli_fetch_assoc($result)){
+        echo "titre : " . $row["titre"]. "<br>" . "contenu : " . $row["contenu"] . "<br>" . "date : " .$row["date_billet"] . "<br>";
+        // echo '<button type="submit" name="comm">Ajouter un commentaire</button>' . "<br><br><br>";
+        $smarty->display('essai.tpl') . "<br><br><br>";
+
+    }
+}
+    else{
+        echo "0 resultats";
+    }
+
+// header('location : essai.php');
 
 
 ?>

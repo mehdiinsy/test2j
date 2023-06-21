@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-06-20 14:39:29
-  from 'C:\wamp64\www\php-works\test2j\essai.tpl' */
+/* Smarty version 4.3.0, created on 2023-06-20 14:47:13
+  from 'C:\wamp64\www\php-works\test2j\essai.php' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_6491ba2135ed25_51130516',
+  'unifunc' => 'content_6491bbf15e2728_43682564',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    'f37359c8323c8ca2e7752ab41f70c7aeafc61b9e' => 
+    '3321b0564cce901fca897a079f4176045c5028d3' => 
     array (
-      0 => 'C:\\wamp64\\www\\php-works\\test2j\\essai.tpl',
+      0 => 'C:\\wamp64\\www\\php-works\\test2j\\essai.php',
       1 => 1687271541,
       2 => 'file',
     ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6491ba2135ed25_51130516 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6491bbf15e2728_43682564 (Smarty_Internal_Template $_smarty_tpl) {
 ?><html>
 <head> 
 <title><?php echo $_smarty_tpl->tpl_vars['titre']->value;?>

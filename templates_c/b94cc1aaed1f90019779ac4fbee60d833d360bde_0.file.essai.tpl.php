@@ -1,7 +1,31 @@
-<html>
+<?php
+/* Smarty version 4.3.0, created on 2023-06-21 10:23:43
+  from 'C:\wamp64\www\php-works\test2j\essai.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '4.3.0',
+  'unifunc' => 'content_6492cfafbbf096_70789414',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    'b94cc1aaed1f90019779ac4fbee60d833d360bde' => 
+    array (
+      0 => 'C:\\wamp64\\www\\php-works\\test2j\\essai.tpl',
+      1 => 1687343008,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_6492cfafbbf096_70789414 (Smarty_Internal_Template $_smarty_tpl) {
+?><html>
 <head> 
-<title>{$titre}</title> 
-{literal} 
+<title><?php echo $_smarty_tpl->tpl_vars['titre']->value;?>
+</title> 
+ 
 <style> 
 table.billets{ 
     font-size: 12px; 
@@ -13,7 +37,7 @@ table.billets{
     font-size: 14px; font-weight: bold; 
     } 
     </style> 
-    {/literal} 
+     
     </head> 
     <body> 
 
@@ -25,7 +49,8 @@ table.billets{
         <a href="smarty.php">Mon blog</a> <br><br><br>
 </form>
 
-    <script>
+    <?php echo '<script'; ?>
+>
     function affiche_form_comment(){  
     o = document.getElementById("form_comment");   
     if(o){ 
@@ -46,6 +71,8 @@ function addComment(){
     commList.appendChild(newComm);
     document.getElementById("comment-field").value = "";
 }
-    </script>
+    <?php echo '</script'; ?>
+>
     </body>
-    </html>
+    </html><?php }
+}
