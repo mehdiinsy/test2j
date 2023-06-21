@@ -14,17 +14,18 @@ table.billets{
     } 
     </style> 
     {/literal} 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+<link rel="stylesheet" href="bootstrap.css">
     </head> 
     <body> 
 
-        
         <form action="smarty.php">
         
         <input type="text" id="comment-field" name="comment-field">
         <button type="submit" onclick="addComment()">envoyer</button><br>
         <a href="smarty.php">Mon blog</a> <br><br><br>
 </form>
-
+   
     <script>
     function affiche_form_comment(){  
     o = document.getElementById("form_comment");   
@@ -47,5 +48,5 @@ function addComment(){
     document.getElementById("comment-field").value = "";
 }
     </script>
-    </body>
+</body>
     </html>

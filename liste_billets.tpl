@@ -16,15 +16,20 @@ table.champs_saisie td {
     {/literal} 
     </head>
     <body>
-    <h1>Nouveau billet</h1>
+    <div class="container">
+    <div class="row">
+    <div class="col-4"></div>
+    <div class="col-8">
+
+    <h1>Nouveau billet</h1> </br>
 <form method="post" action="smarty.php">
 <table class="champs_saisie">
 <tr> <td>Titre :</td>
-<td><input name="titre" type="text" for="titre" /></td> </tr> 
+<td><input name="titre" type="text" for="titre"></td> </tr>
 <tr> <td>Contenu :</td> 
 <td><textarea name="contenu" rows="15" cols="40">
 </textarea>
-</td> </tr> 
+</td> </tr>
 <tr> <td>Catégorie :</td>
 <td><input name="categorie" type="text" /> </tr>
 <tr> <td />
@@ -32,5 +37,8 @@ table.champs_saisie td {
 </td> </tr> 
 </table>
 </form>
+</div>
+</div>
+</div>
 </body>
 </html>

@@ -41,16 +41,14 @@ $resultat = $mysqli->query($requete);
 else{
     echo "Remplissez tout les champs";
 }
-echo "<h1>Résumé des derniers billets entrés :</h1>" . "<br>";
+echo "<h2>Résumé des derniers billets entrés :</h2>" . "<br>";
 
 $sql = "SELECT titre,contenu,date_billet FROM billets_blog";
 $result = mysqli_query($mysqli,$sql);
 if(mysqli_num_rows($result)>0){
     while($row = mysqli_fetch_assoc($result)){
-        echo "titre : " . $row["titre"]. "<br>" . "contenu : " . $row["contenu"] . "<br>" . "date : " .$row["date_billet"] . "<br>";
-        // echo '<button type="submit" name="comm">Ajouter un commentaire</button>' . "<br><br><br>";
+        echo "<hr>" . "titre : " . $row["titre"]. "<br>" . "contenu : " . $row["contenu"] . "<br>" . "date : " .$row["date_billet"] . "<br>";
         $smarty->display('essai.tpl') . "<br><br><br>";
-
     }
 }
     else{
